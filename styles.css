@@ -1,0 +1,39 @@
+body{
+	margin: 0;
+}
+.navbar{
+	top: 0;
+	width:100%;
+	background-color:#210E68;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+}
+.navbar-words{
+	display: flex;
+	list-style: none;
+}
+.navbar-words li{
+	margin-left: 2em;
+}
+.navbar-words a{
+	color: white;
+	text-decoration: none;
+}
+.navbar-words a:hover{
+	color: yellow;
+}
+.navbar-marca{
+	font-size: 2em;
+	color: white;
+	margin-left: 0.8em;
+	text-decoration: none;
+	margin-block-start: 0.3em;
+	margin-block-end: 0.3em;
+}
+.navbar-marca:hover{
+	color: yellow;
+}
+.menuDelMovil{
+	background-color: #210E68;
+}
