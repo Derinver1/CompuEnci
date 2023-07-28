@@ -1,9 +1,11 @@
 body{
 	margin: 0;
 }
+					/*Barra de navegacion*/
 .navbar{
 	top: 0;
 	width:100%;
+	height: 57px;
 	background-color:#210E68;
 	display: flex;
 	justify-content: space-between;
@@ -14,7 +16,7 @@ body{
 	list-style: none;
 }
 .navbar-words li{
-	margin-left: 2em;
+	margin: 0 1em;
 }
 .navbar-words a{
 	color: white;
@@ -35,5 +37,69 @@ body{
 	color: yellow;
 }
 .menuDelMovil{
+	display: none;
+	position:absolute;
+	top:100px;
+	width:100%;
 	background-color: #210E68;
+}
+.menuDelMovil ul{
+	list-style: none;
+}
+.menuDelMovil li{
+	margin: 2em;
+}
+.menuDelMovil a{
+	color: white;
+	text-decoration: none;
+}
+.menuDelMovil a:hover{
+	color: yellow;
+}
+#hamburger{
+	width: 2em;
+	margin: auto;
+}
+.menuBtn{
+	display: none;
+	margin: 0.5em;
+}
+					/*Banner*/
+.banner{
+	width: 100%;
+	height: 320px;
+	background-image: url('images/bannerImg1.jpg');
+	background-size: cover;
+	margin-top: 57px;
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+#logo{
+	margin: 2em;
+	width: 260px;
+}
+.banner11{
+	height: 320px;
+}
+.banner12{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color:#FFFF00;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: justify;
+	height: 320px;
+}
+.banner12 h2{	
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+					/*Introduccion*/
+.contenedor{
+	padding:0 6em;
+}
+h1{
+	text-align: center;
+	font-size: 3em;
 }
