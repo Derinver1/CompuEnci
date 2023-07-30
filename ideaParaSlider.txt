@@ -1,0 +1,45 @@
+¿como implementar el deslizador?
+-hacer un arreglo de imágenes
+-el contenedor tiene tres secciones: la seccion visible y las secciones invisibles,
+ que son dos, la seccion de anterior y siguiente. cada seccion tiene una imagen como
+ fondo de pantalla.
+-hacer calculos para ver cuál imagen es la siguiente, y si es una imagen que va antes
+ o después, dependiendo de eso, ejecuta la animación correspondiente. Y si hay que
+ realizar un salto, colocar la imagen de fondo ya sea en siguiente o anterior primero
+ , y después ejecutar la animacion correspondiente.
+ Al final de la animacion, modificar las clases para usar de nuevo la animacion
+
+¿qué debe hacer el deslizador?
+-mostrar una imagen
+-deslizarse por si solo después de cuatro segundos.Al llegar a
+ la siguiente imagen, iluminar el circulo de azul, que corres-
+ ponde a la imagen correspondiente.
+-al hacer click en un circulo diferente del circulo actual: si
+ el circulo esta antes: deslizar a la derecha imagen actual y 
+ deslizar por la izquierda la imagen que corresponde al circulo
+ seleccionado. Algo similar para cuando el circulo está después
+
+------------------------------------------------------------------------------------------
+
+¿como implementar el deslizador?
+-¡superponiendo las imágenes!
+-dos cartas: la visible y la invisible
+-la imagen SIGUIENTE, puede ser la anterior
+			IDEA GENERAL
+1.-la carta invisible flota hacia el campo visible
+2.-la carta que está por debajo de la imagen que acaba de superponerse es eliminada 
+3.-crear una nueva carta invisible y repetir el proceso
+			MAS DETALLES
+1.-la carta invisible tiene un indice-z mayor al de la carta visible. Mover la carta
+invisible al campo visible, la carta visible toma el lugar de la carta invisible.
+2.-actualizar las clases para que quede lo que estaba al inicio(idealmente solo cambia
+el indice-z)
+			INSTRUCCIONES
+1.-establecer imagen actual, anterior y siguiente
+2.-deslizar después de 2 segundos 
+3.-actualizar clases:actualiza z-index,--
+			INSTRUCCIONES MODO SIMPLE
+1.-establecer imagen actual y siguiente
+2.-deslizar después de 2 segundos
+3.-al terminar la animacion, las imágenes de fondo son actualizadas (espero que no se vea un
+parpadeo...)
