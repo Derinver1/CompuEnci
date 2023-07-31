@@ -43,3 +43,25 @@ el indice-z)
 2.-deslizar después de 2 segundos
 3.-al terminar la animacion, las imágenes de fondo son actualizadas (espero que no se vea un
 parpadeo...)
+------------------------------------------------------------------------------------------------
+IDEA PARA SLIDER
+La animación no es solo un delizamiento a la derecha o a la izquierda, son dos.
+-------------------------------------------------------------------------------------------------
+Definir variables:
+-El panel principal es A{
+	-fondo de pantalla:parte1.jpg
+}
+-El panel siguiente es B (el panel que no es visible){
+	-fondo de pantalla:parte2.jpg
+}
+Instrucciones(intento:1):
+1.-El panel B se desliza a para superponer al panel A.
+2.-Al terminar la animación, el panel A cambia su fondo de pantalla a lo que tenga B como fondo de pantalla.
+3.-El panel B obtiene como fondo de pantalla la imagen siguiente en el arreglo.
+Instrucciones(intento:2):
+1.-Crear un arreglo que contenga los valores de las url de las imagenes que van en el slider (4).
+2.-Crear una función que se ejecute después de 3 segundos; nombre de la función:Slider.
+3.-Slider:
+	1.-Corre las animaciones derecha e izquierda.
+	2.-Al terminar la animacion: cambia el fondo de pantalla de A por la de B.
+	3.-El fondo de pantalla de B adquiere de fondo de pantalla la siguiente imagen del arreglo.
