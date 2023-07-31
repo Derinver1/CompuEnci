@@ -1,0 +1,20 @@
+(después de: banner,slider,jumbotron)Colocar una galería.
+DISEÑO VISUAL
+1.-Colocar 2 divs: 
+	div1:
+	-Muestra la imagen actual
+	div2:
+	-Es la galería, y muestra un contorno en la imagen seleccionada(con una clase), la actual.
+	-Es un grid
+FUNCIONALIDAD
+-Al hacer clic en la imagen actual, la muestra en toda la pantalla, con el fondo oscuro y un botón 
+para cerrar la imagen.
+-Cada celda del grid es un botón
+-Cada celda del grid contiene un escuchador de eventos
+-Cada celda del grid contiene un fondo de pantalla que corresponde a la imagen que puede ser
+ mostrada en el panel del centro
+-Una clase se encarga de mostrar un borde sobre la imagen seleccionada
+-No es posible hacer clic sobre la imagen actualmente señalada en la prevista
+-Hay botones de siguiente y anterior que están haciendose grandes y chicos todo el tiempo; al 
+ presionar cualquiera de ellos, muestra la animación correspondiente y al terminar, la imagen
+ correspondiente
