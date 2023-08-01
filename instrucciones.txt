@@ -7,14 +7,20 @@ DISEÑO VISUAL
 	-Es la galería, y muestra un contorno en la imagen seleccionada(con una clase), la actual.
 	-Es un grid
 FUNCIONALIDAD
--Al hacer clic en la imagen actual, la muestra en toda la pantalla, con el fondo oscuro y un botón 
-para cerrar la imagen.
+div1:
+-la imagen seleccionada se establece como fondo de pantalla
+-todas las imágenes tienen las mismas dimensiones para que puedan ser mostradas todas en el panel
+ , que tiene un tamaño limitado.
+-hay un botón que dice "ver imagen" que la muestra en pantalla completa con el fondo oscurecido y 
+ un botón para cerrar la imagen.(El botón es color negro con letras blancas)
+-Hay botones de siguiente y anterior que están haciendose grandes y chicos todo el tiempo; al 
+ presionar cualquiera de ellos, muestra la animación correspondiente y al terminar, la imagen
+ correspondiente
+div2:
 -Cada celda del grid es un botón
--Cada celda del grid contiene un escuchador de eventos
+-Cada celda del grid contiene un escuchador de eventos tipo clic
 -Cada celda del grid contiene un fondo de pantalla que corresponde a la imagen que puede ser
  mostrada en el panel del centro
 -Una clase se encarga de mostrar un borde sobre la imagen seleccionada
 -No es posible hacer clic sobre la imagen actualmente señalada en la prevista
--Hay botones de siguiente y anterior que están haciendose grandes y chicos todo el tiempo; al 
- presionar cualquiera de ellos, muestra la animación correspondiente y al terminar, la imagen
- correspondiente
+div1:Deslizar imagen:
