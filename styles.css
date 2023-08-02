@@ -8,6 +8,13 @@ h1{
 	text-align: center;
 	font-size: 3em;
 }
+p{
+	font-size: 1.5em;
+	text-align: justify;
+}
+h2{
+	font-size: 2.5em;
+}
 					/*Barra de navegación*/
 .navbar{
 	top: 0;
@@ -76,7 +83,7 @@ h1{
 .banner{
 	width: 100%;
 	height: 320px;
-	background-image: url('images/bannerImg1.2.jpg');
+	background-image: url('images/bannerImg1.4.jpg');
 	background-size: cover;
 	margin-top: 57px;
 	display: grid;
@@ -102,19 +109,19 @@ h1{
 .banner12 h2{	
 	margin-block-start: 0;
 	margin-block-end: 0;
+	font-size: 1.5em;
 }
 					/*Slider*/
 .slider{
 	width: 100%;
 	height:400px;
-	background-color: gray;
+
 	overflow: hidden;
 	position: relative;
 }
 .slider-item0{
 	width: 100%;
 	height:400px;
-	background-color: red;
 	display: inline-block;
 	position: absolute;
 	left: -100%;
@@ -123,7 +130,6 @@ h1{
 .slider-item1{
 	width: 100%;
 	height:400px;
-	background-color: blue;
 	background-image: url('images/sliderItem1.png');
 	background-size: cover;
 	display: inline-block;
@@ -131,7 +137,6 @@ h1{
 .slider-item2{
 	width: 100%;
 	height:400px;
-	background-color: green;
 	background-image: url('images/sliderItem2.png');
 	background-size: cover;
 	display: inline-block;
@@ -183,6 +188,7 @@ to{
 					/*Galería*/
 /*Galería(Panel 1)*/
 .galeria{
+	margin-bottom: 70px;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 500px;
@@ -357,4 +363,80 @@ to{
 	grid-column: 3;
 	background-image: url('images/my-thinkpad-sideview.jpg');
 	background-size: cover;
+}
+					/*Tarjetas*/
+.tarjetas{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 400px);
+}
+.tarjetas div{
+	border: 1px solid black;
+	border-radius: 10%;
+}
+.tarjetas div:hover{
+	background-color: #210E68;
+	color: white;
+}
+.tarjetas img{
+	width: 90%;
+	margin: 10px 5% 0 5%;
+
+}
+.tarjetas h3{
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;
+	font-size: 1.3em;
+	margin-block-end: 0;
+}
+.tarjetas p{
+	font-size: 1em;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: justify;
+	margin-block-start: 0.5em;
+}
+					/*Next section*/
+.nextSection{
+	width: 100%;
+	background-color: #EEF1E2;
+	margin-top: 50px;
+}
+.nextSection h2,.nextSection p{
+	padding:0 50px;
+}
+.nextSection h2:first-child{
+	padding-top: 50px;
+	margin-block-start: 0;
+}
+.nextSection p:last-child{
+	padding-bottom: 50px;
+}
+					/*Ubicación*/
+.ubicacion{
+	width: 100%;
+	background-color: #2F1C7F;
+	height: 600px;
+	margin: 0;
+}
+.ubicacion h1{
+	color: white;
+	padding-top: 10px;
+}
+.ubicacion p{
+	color: white;
+	text-align: center;
+}
+iframe{
+	display: block;
+	margin:0 auto;
+}
+					/*Footer*/
+.footer{
+	width: 100%;
+	height: 300px;
+	background-color: #210E68;
+	margin: 0;
 }
