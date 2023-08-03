@@ -6,6 +6,9 @@ const Gpanel1=document.getElementById("slider1G");
 const Gpanel2=document.getElementById("slider2G");
 const gBtnAnterior=document.getElementById("gBtnAnterior");
 const gBtnSiguiente=document.getElementById("gBtnSiguiente");
+const imagenActual=document.getElementById("imgActual");
+const imagenAnterior=document.getElementById("imgAnterior");
+const imagenSiguiente=document.getElementById("imgSiguiente");
 const imagen1=document.getElementById("imagen1");
 const imagen2=document.getElementById("imagen2");
 const imagen3=document.getElementById("imagen3");
@@ -15,6 +18,8 @@ const imagen6=document.getElementById("imagen6");
 const imagen7=document.getElementById("imagen7");
 const imagen8=document.getElementById("imagen8");
 const imagen9=document.getElementById("imagen9");
+const botonMenu=document.getElementById("botonMenu");
+const elMenu=document.getElementById("elMenu");
 
 const sliderItems=["images/sliderItem1.png","images/sliderItem2.png","images/sliderItem3.png","images/sliderItem4.png"];
 let nextImg=1; 
@@ -34,7 +39,7 @@ function slide(){
 }
 setInterval(slide,2000);
 
-const galleryItems=["images/galleryImg1.png","images/galleryImg2.png","images/galleryImg3.png","images/galleryImg4.png","images/galleryImg5.png","images/galleryImg6.png","images/galleryImg7.png","images/galleryImg8.png","images/galleryImg9.png"];
+const galleryItems=["images/galleryImg1.jpg","images/galleryImg2.png","images/galleryImg3.png","images/galleryImg4.jpg","images/galleryImg5.png","images/galleryImg6.jpg","images/galleryImg7.jpg","images/galleryImg8.jpg","images/galleryImg9.jpg"];
 let nextPhoto=1;
 let currentPhoto=0;
 let prevPhoto=8;
@@ -48,7 +53,7 @@ gBtnAnterior.addEventListener("click",()=>{
 })
 Gpanel1.addEventListener("animationend",()=>{
 	if(Gpanel1.classList.contains('izqG')){
-		Gpanel1.style.backgroundImage=`url(${galleryItems[nextPhoto]})`;
+		imagenActual.src=galleryItems[nextPhoto];
 		nextPhoto++;
 		prevPhoto++;
 		currentPhoto++;
@@ -61,13 +66,13 @@ Gpanel1.addEventListener("animationend",()=>{
 		if(prevPhoto==9){
 			prevPhoto=0;
 		}
-		Gpanel2.style.backgroundImage=`url(${galleryItems[nextPhoto]})`;
-		Gpanel0.style.backgroundImage=`url(${galleryItems[prevPhoto]})`;
+		imagenAnterior.src=galleryItems[prevPhoto];
+		imagenSiguiente.src=galleryItems[nextPhoto];
 		Gpanel1.classList.remove("izqG");
 		Gpanel2.classList.remove("izqG");
 	}
 	if(Gpanel1.classList.contains('derG')){
-		Gpanel1.style.backgroundImage=`url(${galleryItems[prevPhoto]})`;
+		imagenActual.src=galleryItems[prevPhoto];
 		nextPhoto--;
 		prevPhoto--;
 		currentPhoto--;
@@ -80,8 +85,8 @@ Gpanel1.addEventListener("animationend",()=>{
 		if(prevPhoto==-1){
 			prevPhoto=8;
 		}
-		Gpanel0.style.backgroundImage=`url(${galleryItems[prevPhoto]})`;
-		Gpanel2.style.backgroundImage=`url(${galleryItems[nextPhoto]})`;
+		imagenAnterior.src=galleryItems[prevPhoto];
+		imagenSiguiente.src=galleryItems[nextPhoto];
 		Gpanel0.classList.remove("derG");
 		Gpanel1.classList.remove("derG");
 	}
@@ -131,5 +136,13 @@ Gpanel1.addEventListener("animationend",()=>{
 			imagen1.classList.remove("galActual");
 			imagen8.classList.remove("galActual");
 			break;
+	}
+})
+
+botonMenu.addEventListener("click",()=>{
+	if(elMenu.classList.contains("menuDelMovilMostrar")){
+		elMenu.classList.remove("menuDelMovilMostrar");
+	}else{
+		elMenu.classList.add("menuDelMovilMostrar");
 	}
 })
