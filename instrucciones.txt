@@ -24,3 +24,34 @@ div2:
 -Una clase se encarga de mostrar un borde sobre la imagen seleccionada
 -No es posible hacer clic sobre la imagen actualmente señalada en la prevista
 div1:Deslizar imagen:
+--------------------------------------------------------------------------------------------------------
+CAMBIOS QUE HAY QUE HACER A LA GALERÍA:
+En lugar de mostrar la imagen como fondo de pantalla, mostrar la imagen, centrada con flexbox
+y agregarle un id para más tarde agregar un escuchador de eventos que muestre la imagen en 
+pantalla completa. Ocultar el overflow en caso de que la imagen sea demasiado grande...
+
+1.-En lugar de mostrar la imagen como fondo de pantalla, mostrar la imagen, centrada con flexbox
+HECHO
+2.-agregarle un id para más tarde agregar un escuchador de eventos que muestre la imagen en 
+pantalla completa.
+PENDIENTE
+3.-Ocultar el overflow en caso de que la imagen sea demasiado grande...
+HECHO
+
+¿Cómo hacer que al hacer click en una imagen muestre esta en pantalla completa?
+1.-Agregar un escuchador de eventos de tipo click a la imagen actual que:
+	1.-Crea un div con las siguientes características:
+		1.-position:absolute
+		2.-width:100vw
+		3.-height:100vh
+		4.-display:flex
+		5.-justify-content:center
+		6.-align-items:center
+		7.-background-color:*transparent black :v*
+		8.-z-index:*mayor que navbar :v*
+	2.-Agrega una imagen al div con las siguientes características:
+	3.-Agrega un botón con una X para cerrar, en la esquina superior derecha, color negro
+	con las siguientes características:
+		1.-position:absolute
+		2.-top:10px
+		3.-right:10px		
