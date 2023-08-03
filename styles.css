@@ -24,7 +24,7 @@ h2{
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
-	z-index: 4;
+	z-index: 50;
 }
 .navbar-words{
 	display: flex;
@@ -36,6 +36,7 @@ h2{
 .navbar-words a{
 	color: white;
 	text-decoration: none;
+	font-size: 1.3em;
 }
 .navbar-words a:hover{
 	color: yellow;
@@ -53,10 +54,19 @@ h2{
 }
 .menuDelMovil{
 	display: none;
-	position:absolute;
-	top:100px;
+	position:fixed;
+	transform: translateY(-100%);
+	transition: transform 0.2s;
+	top:57px;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	width:100%;
 	background-color: #210E68;
+	z-index: 40;
+}
+.menuDelMovilMostrar{
+	transform: translateY(0);
 }
 .menuDelMovil ul{
 	list-style: none;
@@ -67,6 +77,7 @@ h2{
 .menuDelMovil a{
 	color: white;
 	text-decoration: none;
+	font-size: 1.5em;
 }
 .menuDelMovil a:hover{
 	color: yellow;
@@ -78,6 +89,10 @@ h2{
 .menuBtn{
 	display: none;
 	margin: 0.5em;
+}
+.menuWord{
+	color: white;
+	font-size: 2em;
 }
 					/*Banner*/
 .banner{
@@ -130,17 +145,16 @@ h2{
 	width: 100%;
 	height:400px;
 	background-image: url('images/sliderItem1.png');
-	background-size: cover;
 	display: inline-block;
 }
 .slider-item2{
 	width: 100%;
 	height:400px;
 	background-image: url('images/sliderItem2.png');
-	background-size: cover;
 	display: inline-block;
 	position: absolute;
 	right: -100%;
+	background-size: cover;
 }
 @keyframes moverALaIzquierda{
 from{
@@ -264,28 +278,25 @@ to{
 	position: relative;
 }
 .slider-item0G{
-	width: 100%;
-	height:500px;
-	background-image: url('images/galleryImg9.png');
-	display: inline-block;
 	position: absolute;
 	left: -100%;
 }
-.slider-item1G{
-	width: 100%;
-	height:500px;
-	background-image: url('images/galleryImg1.png');
-	background-size: cover;
-	display: inline-block;
-}
 .slider-item2G{
-	width: 100%;
-	height:500px;
-	background-image: url('images/galleryImg2.png');
 	background-size: cover;
-	display: inline-block;
 	position: absolute;
 	right: -100%;
+	top: 0;
+}
+.slider-item0G,.slider-item1G,.slider-item2G{
+	width: 100%;
+	height:500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#imgActual,#imgAnterior,#imgSiguiente{
+	height: 500px;
+	max-width: 100%;
 }
 .izqG{
 	animation-name: moverALaIzquierda;
@@ -311,55 +322,55 @@ to{
 .fotos11{
 	grid-row: 1;
 	grid-column: 1;
-	background-image: url('images/computer-12.jpg');
+	background-image: url('images/galleryImg1.jpg');
 	background-size: cover;
 }
 .fotos12{
 	grid-row: 1;
 	grid-column: 2;
-	background-image: url('images/diskDrive.png');
+	background-image: url('images/galleryImg2.png');
 	background-size: cover;
 }
 .fotos13{
 	grid-row: 1;
 	grid-column: 3;
-	background-image: url('images/computerBox.png');
+	background-image: url('images/galleryImg3.png');
 	background-size: cover;
 }
 .fotos21{
 	grid-row: 2;
 	grid-column: 1;
-	background-image: url('images/pcInterior.jpg');
+	background-image: url('images/galleryImg4.jpg');
 	background-size: cover;
 }
 .fotos22{
 	grid-row: 2;
 	grid-column: 2;
-	background-image: url('images/usbMemories.png');
+	background-image: url('images/galleryImg5.png');
 	background-size: cover;
 }
 .fotos23{
 	grid-row: 2;
 	grid-column: 3;
-	background-image: url('images/power.jpg');
+	background-image: url('images/galleryImg6.jpg');
 	background-size: cover;
 }
 .fotos31{
 	grid-row: 3;
 	grid-column: 1;
-	background-image: url('images/pc-partsOoo.jpg');
+	background-image: url('images/galleryImg7.jpg');
 	background-size: cover;
 }
 .fotos32{
 	grid-row: 3;
 	grid-column: 2;
-	background-image: url('images/computersInSchool.jpg');
+	background-image: url('images/galleryImg8.jpg');
 	background-size: cover;
 }
 .fotos33{
 	grid-row: 3;
 	grid-column: 3;
-	background-image: url('images/my-thinkpad-sideview.jpg');
+	background-image: url('images/galleryImg9.jpg');
 	background-size: cover;
 }
 					/*Tarjetas*/
@@ -367,7 +378,7 @@ to{
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 400px);
+	grid-template-rows: repeat(2, auto);
 }
 .tarjetas div{
 	border: 1px solid black;
@@ -466,4 +477,56 @@ a:active{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+				/*R E S P O N S I V E N E S S*/
+				/*La barra de navegación todavía se ve bien...*/
+@media only screen and (max-width:1420px){
+	.contenedor{
+		padding: 0;
+	}
+	*{
+		color:red;
+	}
+}
+				/*La barra de navegación se desborda :'v*/
+@media only screen and (max-width:1230px){
+	*{
+		color:green;
+	}
+	.navbar-words{
+		display: none;
+	}
+	.menuBtn{
+		display: block;
+	}
+	.menuDelMovil{
+		display: block;
+	}
+}
+@media only screen and (max-width:1100px){
+	*{
+		color: cyan;
+	}
+}
+@media only screen and (max-width:900px){
+	*{
+		color: yellow;
+	}
+	.galeria{
+		grid-template-columns: 1fr;
+		grid-template-rows: 500px;
+	}
+	.galeria11{
+		grid-row: 1;
+		grid-column: 1;
+	}
+	.galeria12{
+		display: none;
+	}
+}
+@media only screen and (max-width:800px){
+	*{
+		color: purple;
+	}
 }
