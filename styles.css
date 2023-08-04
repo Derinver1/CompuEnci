@@ -623,7 +623,21 @@ a:active{
 	*{
 		color: orange;
 	}
-
+	.banner{
+		grid-template-columns: 1fr;
+	}
+	.banner11{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 200px;
+	}
+	.banner12{
+		display: none;
+	}
+	.menuWord{
+		display: none;
+	}
 }
 @media only screen and (max-width:320px){
 	*{
