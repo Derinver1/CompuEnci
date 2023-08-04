@@ -1,6 +1,8 @@
 const slider0=document.getElementById("slider0");
 const slider1=document.getElementById("slider1");
 const slider2=document.getElementById("slider2");
+const carouselImg1=document.getElementById("carouselImg1");
+const carouselImg2=document.getElementById("carouselImg2");
 const Gpanel0=document.getElementById("slider0G");
 const Gpanel1=document.getElementById("slider1G");
 const Gpanel2=document.getElementById("slider2G");
@@ -24,12 +26,12 @@ const elMenu=document.getElementById("elMenu");
 const sliderItems=["images/sliderItem1.png","images/sliderItem2.png","images/sliderItem3.png","images/sliderItem4.png"];
 let nextImg=1; 
 slider1.addEventListener("animationend",()=>{
-    slider1.style.backgroundImage=`url(${sliderItems[nextImg]})`;
+	carouselImg1.src=sliderItems[nextImg];
     nextImg++;
     if(nextImg==3){
         nextImg=0;
     }
-    slider2.style.backgroundImage=`url(${sliderItems[nextImg]})`;
+    carouselImg2.src=sliderItems[nextImg];
     slider1.classList.remove("izq");
     slider2.classList.remove("izq");
 });
