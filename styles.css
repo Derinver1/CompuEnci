@@ -212,7 +212,6 @@ to{
 .galeria11{
 	grid-row: 1;
 	grid-column: 1;
-	background-image: url('images/galleryImg1.png');
 	background-size: cover;
 	position: relative;
 }
@@ -494,9 +493,6 @@ a:active{
 	.contenedor{
 		padding: 0;
 	}
-	*{
-		color:red;
-	}
 	h1{
 		text-align: center;
 		font-size: 2em;
@@ -510,9 +506,6 @@ a:active{
 }
 				/*La barra de navegación se desborda :'v*/
 @media only screen and (max-width:1230px){
-	*{
-		color:green;
-	}
 	.banner12 h2{	
 		font-size: 1.1em;
 	}
@@ -530,9 +523,6 @@ a:active{
 	}
 }
 @media only screen and (max-width:1050px){
-	*{
-		color: cyan;
-	}
 	.banner12 h2{	
 		font-size: 1em;
 	}
@@ -551,9 +541,6 @@ a:active{
 	}
 }
 @media only screen and (max-width:900px){
-	*{
-		color: yellow;
-	}
 	.galeria{
 		grid-template-columns: 1fr;
 		grid-template-rows: 500px 100px;
@@ -594,17 +581,11 @@ a:active{
 	}
 }
 @media only screen and (max-width:800px){
-	*{
-		color: purple;
-	}
 	p{
 		font-size: 1em;
 	}
 }
 @media only screen and (max-width:600px){
-	*{
-		color: darkgreen;
-	}
 	.tarjetas{
 		display: grid;
 		grid-gap: 20px;
@@ -620,8 +601,11 @@ a:active{
 	}
 }
 @media only screen and (max-width:480px){
-	*{
-		color: orange;
+	.tarjetas{
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, auto);
 	}
 	.banner{
 		grid-template-columns: 1fr;
@@ -640,7 +624,15 @@ a:active{
 	}
 }
 @media only screen and (max-width:320px){
-	*{
-		color: gray;
+	.navbar-marca{
+		font-size: 1.4em;
+		color: white;
+		margin-left: 0.8em;
+		text-decoration: none;
+		margin-block-start: 0.6em;
+		margin-block-end: 0.6em;
+	}
+	h1{
+		font-size: 1.3em;
 	}
 }
