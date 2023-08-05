@@ -1,0 +1,8 @@
+1420:rojo
+1230:verde
+1050:cyan
+900:amarillo
+800:morado
+600:verde oscuro
+480:naranja
+320:gris
